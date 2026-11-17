@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro Veterinario Peluditos </title>
+    <link rel="stylesheet" href="/css/styles.css">
+   <script src="js/ejercicio4.js" defer></script>
+    
+
+   
+
+</head>
+<body>
+    <main>
+        <header>
+            <img class="banner-mascotas" src="https://static.vecteezy.com/system/resources/thumbnails/039/902/085/small_2x/ai-generated-friendly-portrait-of-dogs-and-cats-on-a-white-background-photo.jpeg" alt="perros y gatos" width="980">
+            <h2>CENTRO VETERINARIO</h2>
+            <h1>CACHORRITOS 🐾🐕🐈</h1>
+
+            <p>Llena todos los  datos para  solicitar  su cita</p>
+        </header>
+        <section class="panel">
+        <label for="titulo-formulario"> </label>
+        <h2 id="titulo-formularrio">Datos de la cita</h2>
+
+        <form id="formularioCita"novalidate>
+            <form>
+    <label for="usuario">Usuario:</label>
+  <input type="text" id="usuario" name="usuario">
+  
+  <button type="submit">Ingresar</button>
+</form>      
+
+
+  <label for="nombre">Nombre:</label>
+  <input type="text" id="nombre" name="nombre">
+  <button type="submit">Enviar</button>
+</form>
+            <div class="formulario-contenedor">
+                <div class="campo">
+                    <label for="fechaCita">Fecha de la cita</label>
+                    <input type="date" id="fechaCita" name="fechaCita" required>
+                </div>
+
+                <div class="campo">
+                    <label for="nombreMascota">Nombre de la mascota</label>
+                    <input type="text" id="nombreMascota" name="nombreMascota" maxlength=" 60" placeholder="Ej. : Princesa" required >
+                </div>
+                
+                <div class="campo">
+                    <label for="tipoMascota">Tipo de mascota</label>
+                    <select id="tipoMascota" name="tipoMascota" required>
+                        <option value="">Selecciona una  opciòn</option>
+                        <option value="Perro">Perro</option>
+                        <option value="Gato">Gato</option>
+                       
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="razaMascota">Raza de la  mascota</label>
+                    <input type="text" id="razaMascota" name="razareMascota" maxlength=" 60" placeholder="Ej. : Labrador" required >
+                </div>
+
+                <div class="campo">
+                    <label for="edadMascota">Edad de la  mascota (meses,dìas,años)</label>
+                    <input type="text" id="edadMascota" name="edadMascota"   min="0"  maxlength="100" step="1"  placeholder="Ej. : 2" required >
+                </div>
+
+
+                <div class="campo">
+                    <label for="tipoConsulta">Tipo de Consulta</label>
+                    <select id="tipoConsulta" name="tipoConsulta" required >
+                        <option value="cita">Cita</option>
+                        <option value="Baño y estetica">Baño y estètica</option>
+                        <option value="Vacunaciòn">Vacunaciòn</option>
+                        <option value="Urgencia">Urgencia</option>
+                         <option value="Desparacitaciòn">Desparacitaciòn</option>
+                    </select>
+                </div>
+            </div>
+            <div class="acciones">
+                <button type="button" onclick="agendarCita()">Agendar cita</button>
+                <button type="button" class="secundario" onclick="LimpiarFormulario()">Limpiar formulario</button>
+            </div>
+
+            <p id="mensaje" role="status" aria-live="polite">Datos guardados</p>
+            </form>
+        </section>
+
+        <section class="panel">
+        <label for="titulo-tabla">
+            <div class="tabla-cabecera">
+                <h2 id="titulo-tabla"> Citas registradas"</h2>
+                <p id= "contador">Total : 0 citas</p>
+            </div>
+        
+      <div class="tabla-contenedor">
+        <table>
+            <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Nombre de la mascota</th>
+                    <th>Tipo de mascota</th>
+                    <th>Raza</th>
+                    <th>Edad</th>
+                    <th>Tipo de consulta</th>
+                </tr>
+            </thead>
+            <tbody id="FilasCitas">
+                <tr>
+                    <td class="vacio" colspan="6">No hay citas registradas</td>
+                </tr>
+            </tbody>
+        </div>
+    </section>
+    </main>
+</body>
+</html>
